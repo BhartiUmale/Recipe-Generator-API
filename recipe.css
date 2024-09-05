@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+main{ 
+    background-image: url(./bg-3.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: none;
+    color: #333333;
+}
+.wel{
+font-size: 40px;  
+font-family: "Trirong", serif;
+color:#4A2C2A 
+}
+.h-f-bg {
+    background-color: #F5E0C3; }
+
+
+.h_f_t{
+    color: #5A3825; 
+}
+.mainPara{
+    color:#4A2C2A;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.exploreRecipeBtn:hover{
+    color: white;
+    background-color: black;
+
+}
+
+
+
