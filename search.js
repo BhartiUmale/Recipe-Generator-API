@@ -35,12 +35,17 @@ function displaySearchData(meals){
 
         const title=document.createElement("h3")
         title.textContent=m.strMeal
+        title.classList.add("title")
 
         const area=document.createElement("h3")
-        area.textContent=m.strArea +"Food";
+        area.textContent=m.strArea +" Food";
+        area.classList.add("area")
+
+        
 
         const instruction=document.createElement("p")
         instruction.textContent=m.strInstructions;
+        instruction.classList.add("instruction")
          
         const Category=document.createElement("h4")
         Category.textContent= "Its a "+m.strCategory+" Type of Food"

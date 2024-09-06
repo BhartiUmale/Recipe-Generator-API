@@ -23,18 +23,29 @@ function fetchData(id){
 function display(meals){
     meals.forEach(s => {
         const rDiv=document.createElement("div")
-
+        rDiv.classList.add("card","p-5")
+      
         const RImg=document.createElement("img")
         RImg.src=s.strMealThumb;
 
         const Title=document.createElement("h1")
         Title.textContent=s.strMeal
+        Title.classList.add("title")
 
         const area1=document.createElement("h3")
-        area1.textContent=s.strArea
+        area1.textContent=s.strArea+" Food"
+        area1.classList.add("area")
 
+        const headInstru=document.createElement("h3")
+        headInstru.textContent="Lets get Cooking"
+        headInstru.classList.add("headIntru")
         const instru=document.createElement("p")
         instru.textContent=s.strInstructions
+        instru.classList.add("instruction")
+
+        const head=document.createElement("h4")
+        head.textContent="Ingredients You Will Need"
+        head.classList.add("headIng")
 
         const ingredientcontainer=document.createElement('ul')
         ingredientcontainer.classList.add("list-unstyled")
@@ -54,11 +65,11 @@ function display(meals){
         // yVideo.width = "560";
         // yVideo.height = "315";
 
-        rDiv.append(Title,RImg,area1,ingredientcontainer,instru)
+        rDiv.append(Title,RImg,area1,head,ingredientcontainer,headInstru,instru)
         mDiv.appendChild(rDiv)
         
         
     });
 
-    document.body.appendChild(mDiv)
+ 
 } fetchData(id)

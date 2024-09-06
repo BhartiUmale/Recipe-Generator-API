@@ -31,16 +31,35 @@ function fetchdata(){
 
 function  showMealDetail(ele){
     const sDiv=document.createElement("div")
+    
+    const card=document.createElement("div")
+    card.classList.add("card")
+
+    const cardbody=document.createElement("div")
+    cardbody.classList.add("cardBody","h-100","p-5")
+
+    sDiv.classList.add("col-lg-6","col-md-12","mb-4")
         const RImg=document.createElement("img")
         RImg.src=ele.strMealThumb;
 
         const Title=document.createElement("h1")
         Title.textContent=ele.strMeal
+        Title.classList.add("title")
 
         const area1=document.createElement("h3")
-        area1.textContent=ele.strArea || "not "
+        area1.textContent=ele.strArea+" Food" || "not "
+        area1.classList.add("area")
+
+        const headInstru=document.createElement("h3")
+        headInstru.textContent="Lets get Cooking"
+        headInstru.classList.add("headIntru")
         const instru=document.createElement("p")
         instru.textContent=ele.strInstructions || "not"
+        instru.classList.add("instruction")
+
+        const head=document.createElement("h4")
+        head.textContent="Ingredients You Will Need"
+        head.classList.add("headIng")
 
         const ingredientcontainer=document.createElement('ul')
         ingredientcontainer.classList.add("list-unstyled")
@@ -59,8 +78,10 @@ function  showMealDetail(ele){
         // yVideo.src=s.strYoutube
         // yVideo.width = "560";
         // yVideo.height = "315";
-
-        sDiv.append(Title,RImg,area1,ingredientcontainer,instru)
+       
+        cardbody.append(Title,area1,head,ingredientcontainer,headInstru,instru)
+        card.append(RImg,cardbody)
+        sDiv.appendChild(card)
         maindiv.appendChild(sDiv)
         
         
@@ -68,5 +89,4 @@ function  showMealDetail(ele){
 
         
 
-    //document.body.appendChild(maindiv)
-}
+    }
